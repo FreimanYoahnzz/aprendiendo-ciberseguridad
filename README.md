@@ -1,4 +1,4 @@
-# curso base para aprendizaje de ciberseguridad
+# Curso base para aprendizaje de ciberseguridad
 Notas, apuntes y ejercicios del proceso de aprendizaje de ciberseguridad desde cero
 En este repositorio se tendrá en cuenta el proceso desde cero para entrar en el mundo de la ciberseguridad, aprender sus fundamentos, aplicaciones y todo aquello a lo cual se aplique, la meta es aprender todo lo que se pueda para ser el mejor en ello.
 
