@@ -7,8 +7,8 @@ En este repositorio se tendrá en cuenta el proceso desde cero para entrar en el
 - Ejercicios y retos resueltos
 - Certificaciones en progreso
 
-## Fase 1: Fundamentos técnicos
-1. Redes: modelo TCP/IP y OSI, direccionamiento IP y subnetting, DNS, DHCP, HTTP/HTTPS, protocolos comunes (FTP, SSH, SMTP), firewalls básicos
+## [Fase 1: Fundamentos técnicos](Fase-1)
+1. [Redes: modelo TCP/IP y OSI, direccionamiento IP y subnetting, DNS, DHCP, HTTP/HTTPS, protocolos comunes (FTP, SSH, SMTP), firewalls básicos
 2. Sistemas Linux: terminal, sistema de archivos, permisos, gestión de usuarios, procesos, administración básica de servicios
 3. Sistemas Windows: administración básica, Active Directory
 4. Programación aplicada a seguridad: python (automatización, parsing de logs, herramientas propias)
@@ -46,3 +46,42 @@ algunas se irán integrando a lo largo del curso
 - eJPT → al terminar Fase 3 básica, certificación práctica de pentesting junior
 - CompTIA CySA+ o similar, para quien se incline por el Blue Team
 - OSCP → objetivo a mediano-largo plazo, la más respetada en pentesting, y que exige nivel real
+
+# Fase 1
+## 1. Redes
+Para entrar al mundo de la ciberseguridad, primero hay que entender Redes, ya que casi todo lo que hace un profesional en ciberseguridad pasa por entender 
+como viaja la información entre un computador y otro. Si no se entiende esto desde el principio, no se sabrá entender el lenguaje en el cual se comunican las
+dos maquinas, y por ende lo único que se hará es usar las herramientas de seguridad a ciegas, sin tener la menor idea de que es lo que se esta viendo,
+atacando o defendiendo.
+
+ **¿Qué es una red?**  
+Una red es básicamente un grupo de dispositivos conectados entre que pueden intercambiar información. Estas pueden ser relativamente pequeñas, desde un simple
+computador computador conectado a un router, ó tan grandes como todo internet.
+
+Para que dos maquinas(computadores) se entiendan, estas necesitan hablar el mismo idioma, para esto se utilizan unos protocolos, los cuales son 
+un conjunto de reglas y normas estandarizadas que definen como se deben transferir, cifrar, autenticar, y verificar los datos entre los sistemas, para 
+protegerlos de ataques cibernéticos. Antes de ver estos protocolos hay que saber como se organizan.
+
+- **Modelo TCP/IP**  
+Para entender este modelo, imaginemos que enviar información por internet es como enviar una carta, no vasta con solo enviar el mensaje, también se necesita saber 
+la dirección, un mensajero que la lleve de la forma correcta al destino a la que quiere ser enviada y que esta llegue completa y en orden. Para hacer esto en una red
+existe el modelo TCP/IP, el cual organiza la información por capas(bloques) y se asegura que la información llegue completa a su destino. Este modelo se divide en 
+dos protocolos:
+
+    - **Internet Protocol**(Protocolo de internet) más conocido como **IP**, se encarga de ponerle una dirección a cada dispositivo que este conectado a una red, y decide 
+   el camino que debe de seguir la información para llegar de un dispositivo a otro.
+   
+      En palabras simples es como cuando se hace algún tipo de pedido por internet, para que el paquete llegue a su destino se debe dar una la dirección, cada casa tiene una
+      dirección única(calle, numero, ciudad), para que el paquete sea entregado correctamente, el transportador debe conocer dicha información para saber el destino  del
+      paquete y poder entregarlo. Eso mismo pasa en una red, cada dispositivo conectado a esa red tiene una dirección IP única para que otros dispositivos sepan a donde
+      enviarle la información.
+   
+   - **Transmission Control Protocol**(Protocolo de Control de Transmisión), más conocido como **TCP**, se encarga de que la información enviada a esa IP llegue de forma
+   completa, en orden y sin errores.
+   
+      Cuando se envía información grande por internet como una pagina web completa, esta no viaja en una sola pieza, se empaqueta en módulos(paquetes pequeños),
+      cada uno de estos módulos viajan por separado, a veces incluso lo hacen por rutas distintas dentro de la red. El TCP es el encargado numerar dichos módulos para que el 
+      receptor sepa en que orden armarlos de nuevo, confirmar que cada paquete llegue bien, y en caso de que algunos de los módulos se pierdan en el camino, el TCP pide que se le reenvíen
+      para organizar la información y así entregarla de forma completa y en el orden correcto a quien pidió la información.
+
+
