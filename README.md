@@ -7,7 +7,7 @@ En este repositorio se tendrá en cuenta el proceso desde cero para entrar en el
 - Ejercicios y retos resueltos
 - Certificaciones en progreso
 
-## [Fase 1: Fundamentos técnicos](Fase-1)
+## Fase 1: Fundamentos técnicos
 1. [Redes: modelo TCP/IP y OSI, direccionamiento IP y subnetting, DNS, DHCP, HTTP/HTTPS, protocolos comunes (FTP, SSH, SMTP), firewalls básicos
 2. Sistemas Linux: terminal, sistema de archivos, permisos, gestión de usuarios, procesos, administración básica de servicios
 3. Sistemas Windows: administración básica, Active Directory
@@ -83,5 +83,21 @@ dos protocolos:
       cada uno de estos módulos viajan por separado, a veces incluso lo hacen por rutas distintas dentro de la red. El TCP es el encargado numerar dichos módulos para que el 
       receptor sepa en que orden armarlos de nuevo, confirmar que cada paquete llegue bien, y en caso de que algunos de los módulos se pierdan en el camino, el TCP pide que se le reenvíen
       para organizar la información y así entregarla de forma completa y en el orden correcto a quien pidió la información.
+
+  Teniendo lo mencionado anteriormente en cuenta, como la IP es una cantidad determinada de números separados por puntos tales como: "142.250.190.78" ó "192.168.1.", y al ser tan largos,
+  seria muy tedioso tener que memorizarse una IP diferente para cada pagina a la cual se quisiera acceder.
+
+  Para resolver ese problema existe el **Domain Name System**(Sistema de Nombres de Dominio) conocido como **DNS**, el cual actúa como una agenda de contactos de un teléfono celular, en donde
+  la persona no tiene que saber necesariamente el número de teléfono de una persona en especifico para contactarla, si no que accede a dicho contacto por medio de su nombre. Ese nombre cuando
+  se registra queda asociado a el número de teléfono correspondiente, entonces cuando se quiere contactar a dicha persona, internamente busca el número asociado a ese nombre para así proceder a
+  contactarla.
+
+  El DNS hace exactamente lo mismo, pero para internet, se escribe el nombre de la pagina que se desea buscar, por ejemplo "google.com", y el DNS busca la dirección IP asociada a esa pagina.
+   
+  **¿Cómo funciona el proceso de "Buscar"?**
+  Cuando se escribe "google.com", el computador le pregunta a un servidor DNS que normalmente es el del proveedor de internet, o uno público algo como: "oye, ¿cuál es la dirección
+  IP de google.com?". El servidor DNS responde con la IP correcta, y ahí recién empieza el proceso de conexión TCP, envío de paquetes, etc.
+   
+  
 
 
